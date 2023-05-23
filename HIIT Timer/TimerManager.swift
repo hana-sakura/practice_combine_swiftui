@@ -8,23 +8,29 @@ import Combine
 import AVFoundation
 
 class TimerManager: ObservableObject {
-    @Published var isRunning = false
+    /// タイマー稼働中か
+    @Published var isRunning: Bool = false
+    /// 残り秒数
     @Published var remainingTime: Double = 0.0
+    /// 表示秒数
     @Published var displayTime: Int = 0
+    /// セット数
     @Published var currentSet: Int
+    /// 運動時間
     @Published var exerciseTime: Int
+    /// 休憩時間
     @Published var restTime: Int
+    /// セット数
     @Published var numSets: Int
-    @Published var isTimerRunning: Bool = false
+    /// プログレスバーの進捗
     @Published var duration: CGFloat = 0
     
     private var cancellable: AnyCancellable?
     private var timer: Timer?
+    private var isRestTime = true
     var maxValue: Double = 0.0
 
     private let stopSound: AVAudioPlayer
-    
-    private var isRestTime = true
     
     init(exerciseTime: Int, restTime: Int, numSets: Int) {
         self.exerciseTime = exerciseTime
@@ -79,7 +85,8 @@ class TimerManager: ObservableObject {
         self.exerciseTime = exerciseTime
         self.numSets = numSets
     }
-    
+
+    /// タイマー終了時の切り替え
     private func handleTimerEnd() {
         if isRestTime {
             displayTime = exerciseTime
