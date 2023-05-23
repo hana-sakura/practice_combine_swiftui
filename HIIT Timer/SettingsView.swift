@@ -14,36 +14,9 @@ struct SettingsView: View {
     
     var body: some View {
         VStack {
-
-            HStack {
-                Text("Rest Time")
-                Spacer()
-                TextField("10", text: $restTimeInput)
-                    .keyboardType(.numberPad)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .multilineTextAlignment(TextAlignment.trailing)
-                    .frame(width: 40)
-            }.padding(.horizontal)
-
-            HStack {
-                Text("Exercise Time")
-                Spacer()
-                TextField("20", text: $exerciseTimeInput)
-                    .keyboardType(.numberPad)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .multilineTextAlignment(TextAlignment.trailing)
-                    .frame(width: 40)
-            }.padding(.horizontal)
-
-            HStack {
-                Text("Set")
-                Spacer()
-                TextField("8", text: $numSetsInput)
-                    .keyboardType(.numberPad)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .multilineTextAlignment(TextAlignment.trailing)
-                    .frame(width: 40)
-            }.padding(.horizontal)
+            TimerInputView(title: "Rest Time", inputText: $restTimeInput)
+            TimerInputView(title: "Exercise Time", inputText: $exerciseTimeInput)
+            TimerInputView(title: "Set", inputText: $numSetsInput)
 
             Button("Save") {
                 guard let restTime = Int(restTimeInput),

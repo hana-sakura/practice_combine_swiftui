@@ -17,6 +17,7 @@
 		0A49CDE62A1480EC00956FBA /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A49CDE52A1480EC00956FBA /* TimerManager.swift */; };
 		0A49CDE82A148B7E00956FBA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A49CDE72A148B7E00956FBA /* SettingsView.swift */; };
 		308817822A18CAC900582DB3 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 308817812A18CAC900582DB3 /* sound.mp3 */; };
+		308817842A1D030400582DB3 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308817832A1D030400582DB3 /* InputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		0A49CDE52A1480EC00956FBA /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		0A49CDE72A148B7E00956FBA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		308817812A18CAC900582DB3 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
+		308817832A1D030400582DB3 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				0A49CDE32A1480B400956FBA /* MainView.swift */,
 				0A49CDE52A1480EC00956FBA /* TimerManager.swift */,
 				0A49CDE72A148B7E00956FBA /* SettingsView.swift */,
+				308817832A1D030400582DB3 /* InputView.swift */,
 				308817812A18CAC900582DB3 /* sound.mp3 */,
 				0A49CDBD2A147F9400956FBA /* Assets.xcassets */,
 				0A49CDBF2A147F9400956FBA /* Preview Content */,
@@ -269,6 +272,7 @@
 			files = (
 				0A49CDE62A1480EC00956FBA /* TimerManager.swift in Sources */,
 				0A49CDE82A148B7E00956FBA /* SettingsView.swift in Sources */,
+				308817842A1D030400582DB3 /* InputView.swift in Sources */,
 				0A49CDE42A1480B400956FBA /* MainView.swift in Sources */,
 				0A49CDBA2A147F9300956FBA /* HIIT_TimerApp.swift in Sources */,
 			);
